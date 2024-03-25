@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetWeb 🐾</title>
+    <link rel="stylesheet" href="1estilonovo.css"> <!-- referência ao css-->
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="petweb.png" alt="Ícone do PetShop">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Faça seu Login</a></li>
+                <li><a href="1formulario.html">Cadastre-se</a></li> <!-- referência à página de cadastro-->
+            </ul>
+        </nav>
+    </header>
+    <hr>
+<br>
+<br>
+<br>
+<br>   <!-- início do detalhamento do serviço selecionado onde é possível escolher porte do animal e Telebusca-->
+    <form action="https://formsubmit.co/jennygraziele@yahoo.com.br" method="post">
+        <fieldset>
+            <legend style="font-weight: bold; font-size: 18px; font-family: Arial, Helvetica, sans-serif">Agende o
+                serviço para seu Pet</legend>          
+                <br>
+                <br> <label for="servico">Selecione o serviço:</label><br>
+
+            <select id="servico" name="servico">
+                <option value="">Selecione</option>
+                <option value="banho">Banho</option>
+                <option value="banho-tosa">Banho e Tosa</option>
+                <option value="banho-tosa-higienica">Banho e Tosa Higiênica</option>
+                <option value="tosa">Tosa</option>
+                <option value="tosa-higienica">Tosa Higiênica</option>
+            </select>
+            <div id="porte" class="escondido">
+                <label for="porte">Qual o porte do Pet?</label>
+                <br>
+                <input type="radio" id="porte-grande" name="porte" value="grande">
+                <label for="porte-grande">Grande</label>
+                <br>
+                <input type="radio" id="porte-pequeno" name="porte" value="pequeno">
+                <label for="porte-pequeno">Pequeno</label>
+            </div>
+            <div id="telebusca" class="escondido">
+                <label for="telebusca">Incluir Serviço de Telebusca?</label>
+                <br>
+                <input type="radio" id="telebusca-sim" name="telebusca" value="sim">
+                <label for="telebusca-sim">SIM</label>
+                <br>
+                <input type="radio" id="telebusca-nao" name="telebusca" value="nao">
+                <label for="telebusca-nao">NÃO</label>
+            </div>
+
+            <div id="calendario" class="escondido">
+                <label for="data-agendamento">Escolha o dia e horário:</label>
+                <input type="date" id="data-agendamento" name="data-agendamento">
+                <input type="time" id="hora-agendamento" name="hora-agendamento">
+            </div>
+
+            <div id="valorPagamento" class="valor-formatado"></div>
+
+            <br>
+            <br>
+            <div id="açoes" class="botoes">
+                <button type="reset">Limpar</button>
+                <button type="submit">Adicionar ao Carrinho</button>
+                <button id="Cancelar">Cancelar</button>
+                <script>
+                    document.getElementById("Cancelar").addEventListener("click", function () {
+                        window.location.href = "1paginicial.html";
+                    });
+                </script>
+            </div>
+            <br>
+<br>
+<br>
+        </fieldset>
+    </form>
+<!-- fim do detalhamento do serviço selecionado onde é possível escolher porte do animal e Telebusca-->
+    <footer> <!-- rodapé-->
+        <div class="footer-left">
+            <p style="font-size: larger;"><b>Atendimento</b></p>
+            <p style="font-size: larger;">Fale conosco</p>
+            <p style="font-size: larger;">Assessoria de imprensa</p>
+        </div>
+        <div class="footer-middle">
+            <p style="font-size: larger;"><b>Siga-nos</b></p>
+            <img src="Rectangle 73.png" alt="Ícone 1">
+            <img src="Rectangle 74.png" alt="Ícone 2">
+        </div>
+        <div class="footer-right">
+            <p style="font-size: larger;"><b>Formas de pagamento</b></p>
+            <img src="pgto1.png" alt="Ícone 3">
+            <img src="pgto2.png" alt="Ícone 4">
+        </div>
+        <div>
+            <center><h6>Desenvolvido na disciplina de Fundamentos de Sistemas WEB</h6></center>
+            <center><a><h6>por Jenny Oliveira<h6></h6></a></center>
+            <center><h6>PUCRS<h6></center>
+        </div>
+<br>
+</footer>        
+<script src="1srvicos.js"></script>
+</body>
+</html>
